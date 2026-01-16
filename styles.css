@@ -1,50 +1,150 @@
+/* General Styles */
 body {
-font-family: Arial;
-margin: 0;
-background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-nav {
-background: #333;
-color: white;
-padding: 10px;
-display: flex;
-justify-content: space-between;
+body.dark {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header.dark {
+    background-color: #0056b3;
 }
 
 nav ul {
-list-style: none;
-display: flex;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
-nav ul li {
-margin-left: 10px;
+nav a {
+    color: white;
+    text-decoration: none;
 }
 
-nav ul li a {
-color: white;
-text-decoration: none;
+.search-bar {
+    margin: 1rem 0;
 }
 
-.blog {
-width: 90%;
-max-width: 800px;
-margin: auto;
+#searchInput {
+    padding: 0.5rem;
+    width: 200px;
 }
 
-.post {
-background: white;
-padding: 15px;
-margin: 20px 0;
+#themeToggle {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.post img {
-width: 100%;
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
 }
 
-.comments input,
-.comments textarea {
-width: 100%;
-margin-top: 5px;
-padding: 5px;
+/* Blog Post Styles */
+.blog-post {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+body.dark .blog-post {
+    background: #444;
+    color: #f4f4f4;
+}
+
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.date {
+    font-style: italic;
+    color: #666;
+}
+
+.tags {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.social-share a {
+    margin-right: 1rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Comments */
+.comments {
+    margin-top: 2rem;
+}
+
+.comments div {
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input, textarea {
+    padding: 0.5rem;
+}
+
+button {
+    padding: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .blog-post {
+        padding: 0.5rem;
+    }
+    #searchInput {
+        width: 100%;
+    }
 }
