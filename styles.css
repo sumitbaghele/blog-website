@@ -1,0 +1,50 @@
+body {
+font-family: Arial;
+margin: 0;
+background: #f4f4f4;
+}
+
+nav {
+background: #333;
+color: white;
+padding: 10px;
+display: flex;
+justify-content: space-between;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+}
+
+nav ul li {
+margin-left: 10px;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+}
+
+.blog {
+width: 90%;
+max-width: 800px;
+margin: auto;
+}
+
+.post {
+background: white;
+padding: 15px;
+margin: 20px 0;
+}
+
+.post img {
+width: 100%;
+}
+
+.comments input,
+.comments textarea {
+width: 100%;
+margin-top: 5px;
+padding: 5px;
+}
